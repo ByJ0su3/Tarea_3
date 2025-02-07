@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tabla de Multiplicar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tabla de Multiplicar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label position="floating">Número</ion-label>
+    <ion-input type="number" [(ngModel)]="numero"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="calcular()">Generar Tabla</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let linea of tabla">
+      {{ linea }}
+    </ion-item>
+  </ion-list>
+</ion-content>
